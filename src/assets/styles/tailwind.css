@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*fonts*/
+@layer base {
+  /*sf-pro-display*/
+  @font-face {
+    font-family: 'SF Pro Display Bold';
+    src: url('@/assets/fonts/sf-pro-display/SF-Pro-Display-Bold.otf')
+      format('opentype');
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'SF Pro Display Medium';
+    src: url('@/assets/fonts/sf-pro-display/SF-Pro-Display-Medium.otf')
+      format('opentype');
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'SF Pro Display Regular';
+    src: url('@/assets/fonts/sf-pro-display/SF-Pro-Display-Regular.otf')
+      format('opentype');
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'SF Pro Display Thin';
+    src: url('@/assets/fonts/sf-pro-display/SF-Pro-Display-Thin.otf')
+      format('opentype');
+    font-display: swap;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  /*rubik*/
+  @font-face {
+    font-family: 'Rubik Bold';
+    src: url('@/assets/fonts/rubik/Rubik-Bold.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Rubik Medium';
+    src: url('@/assets/fonts/rubik/Rubik-Medium.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Rubik Regular';
+    src: url('@/assets/fonts/rubik/Rubik-Regular.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Rubik Thin';
+    src: url('@/assets/fonts/rubik/Rubik-Light.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 100;
+    font-style: normal;
+  }
+  /*poppins*/
+  @font-face {
+    font-family: 'Poppins Bold';
+    src: url('@/assets/fonts/poppins/Poppins-Bold.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Poppins Medium';
+    src: url('@/assets/fonts/poppins/Poppins-Medium.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Poppins Regular';
+    src: url('@/assets/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Poppins Thin';
+    src: url('@/assets/fonts/poppins/Poppins-Thin.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 100;
+    font-style: normal;
+  }
+}

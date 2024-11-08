@@ -1,13 +1,8 @@
-
 <template>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+  <RouterLink to="/">Home</RouterLink>
+  <RouterLink :to="{ name: 'Login' }">Login</RouterLink>
   <RouterView />
 </template>
-<script setup>
+<script setup></script>
 
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>
