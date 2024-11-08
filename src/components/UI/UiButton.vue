@@ -42,6 +42,9 @@ const buttonClasses = computed(() => ({
 .ui-button-xl {
   @apply h-12 px-[18px] py-3 text-base leading-none;
 }
+.ui-button-filter {
+  @apply px-8 py-3 text-base leading-none;
+}
 .ui-button-solid.ui-button-primary {
   @apply bg-blue-600 text-white hover:bg-blue-700;
 }
@@ -74,6 +77,12 @@ const buttonClasses = computed(() => ({
 }
 .ui-button-white.ui-button-danger {
   @apply text-red-600;
+}
+.ui-button-solid.ui-button-purple {
+  @apply bg-[#EDF1FD] text-blue-600 hover:bg-blue-100;
+}
+.ui-button-white.ui-button-purple {
+  @apply text-[#EDF1FD];
 }
 .ui-button-rounded {
   @apply rounded-full;

@@ -1,6 +1,11 @@
 <template>
   <form class="flex flex-col gap-[22px] pt-11" @submit.prevent="handleSubmit">
-    <UiInput label="login" placeholder="adm8904" v-model="login" />
+    <UiInput
+      label="login"
+      type="text"
+      placeholder="Enter your login"
+      v-model="login"
+    />
     <UiInput
       label="parol"
       type="password"

@@ -1,6 +1,6 @@
 <template>
   <RouterLink :to="{ name: 'Home' }">
-    <img src="@/assets/svg/group_logo.svg" alt="group_logo" class="mx-auto" />
+    <img src="@/assets/svg/logo_login.svg" alt="logo_login" class="mx-auto" />
   </RouterLink>
 </template>
 
