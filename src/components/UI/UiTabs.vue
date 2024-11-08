@@ -42,17 +42,17 @@ const tabClasses = tab =>
 }
 
 .tab {
-  @apply w-48 border-2 border-[rgba(224,231,255,1)] text-center text-[12px] leading-3 font-rubik-medium tracking-[1.13px] text-[rgba(51,102,255,0.6)];
-  @apply transition hover:opacity-70;
-}
-.tab:last-child {
-  @apply border-l-0 rounded-r-md;
+  @apply w-48 max-sm:w-28  border-y-2 border-x border-[rgba(224,231,255,1)] text-center text-[12px] leading-3 font-rubik-medium tracking-[1.13px] text-[rgba(51,102,255,0.6)];
+  @apply transition ease-in-out  hover:text-[#2563eb];
 }
 .tab:first-child {
-  @apply border-r-0 rounded-l-md;
+  @apply rounded-l-md border-l-2;
+}
+.tab:last-child {
+  @apply rounded-r-md border-r-2;
 }
 .tab-active {
   @apply bg-[#2563eb] text-white border-[#2563eb];
-  @apply hover:opacity-100;
+  @apply hover:text-white;
 }
 </style>

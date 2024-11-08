@@ -65,6 +65,6 @@ const inputClasses = computed(() => ({
   @apply h-14 text-xl;
 }
 .ui-input-search {
-  @apply h-10 text-base border-0 bg-[#E8E8E8] w-72;
+  @apply h-10 text-base border-0 bg-[#E8E8E8] px-0 w-60 max-sm:w-36 sm:w-48 xl:w-60;
 }
 </style>
