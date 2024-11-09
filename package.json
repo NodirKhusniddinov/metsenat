@@ -11,11 +11,13 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "apexcharts": "^4.0.0",
     "pinia": "^2.2.4",
     "vue": "^3.5.12",
     "vue-recaptcha": "^3.0.0-alpha.6",
     "vue-recaptcha-v3": "^2.0.1",
-    "vue-router": "^4.4.5"
+    "vue-router": "^4.4.5",
+    "vue3-apexcharts": "^1.7.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
@@ -28,6 +30,7 @@
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.14",
     "vite": "^5.4.10",
-    "vite-plugin-vue-devtools": "^7.5.3"
+    "vite-plugin-vue-devtools": "^7.5.3",
+    "vite-plugin-vue-svg": "^0.1.0"
   }
 }

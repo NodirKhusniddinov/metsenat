@@ -9,7 +9,7 @@
         { name: 'Students', label: 'talabalar', route: { name: 'Students' } },
       ]"
     />
-    <div class="flex items-center gap-5 flex-wrap gap-y-5">
+    <div class="flex items-center gap-5 flex-wrap">
       <div class="flex items-center gap-2 bg-[#E8E8E8] px-2.5 rounded-md">
         <img src="@/assets/icons/search_icon.svg" alt="search_icon" />
         <UiInput placeholder="Izlash" size="search" />
