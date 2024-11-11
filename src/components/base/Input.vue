@@ -1,6 +1,6 @@
 <template>
-  <div class="ui-input-wrapper">
-    <label v-if="label" :for="inputId" class="ui-input-label">
+  <div class="base-input-wrapper">
+    <label v-if="label" :for="inputId" class="base-input-label">
       {{ label.toUpperCase() }}
     </label>
     <input
@@ -28,43 +28,43 @@ const props = defineProps({
   modelValue: String,
 })
 
-const inputId = `ui-input-${Math.random().toString(36).substring(2, 15)}`
+const inputId = `base-input-${Math.random().toString(36).substring(2, 15)}`
 
 const inputClasses = computed(() => ({
-  'ui-input': true,
-  [`ui-input-${props.size}`]: true,
+  'base-input': true,
+  [`base-input-${props.size}`]: true,
 }))
 </script>
 
 <style scoped>
-.ui-input-wrapper {
+.base-input-wrapper {
   @apply flex flex-col gap-2;
 }
 
-.ui-input-label {
+.base-input-label {
   @apply text-sm leading-[14.22px] tracking-[2px] font-rubik-medium text-gray-700;
 }
 
-.ui-input {
+.base-input {
   @apply w-full px-3 py-2 border border-[rgba(224,231,255,1)] bg-[rgba(224,_231,_255,_0.2)] rounded-md outline-none font-rubik text-[rgba(46,56,77,1)];
 }
 
-.ui-input-sm {
+.base-input-sm {
   @apply h-8 text-sm;
 }
 
-.ui-input-md {
+.base-input-md {
   @apply h-10 text-base;
 }
 
-.ui-input-lg {
+.base-input-lg {
   @apply h-12 text-lg;
 }
 
-.ui-input-xl {
+.base-input-xl {
   @apply h-14 text-xl;
 }
-.ui-input-search {
+.base-input-search {
   @apply h-10 text-base border-0 bg-[#E8E8E8] px-0 w-60 max-sm:w-36 sm:w-48 xl:w-60;
 }
 </style>

@@ -8,7 +8,7 @@
 <script setup>
 import Header from '@/components/Header/Header.vue'
 import { useRoute } from 'vue-router'
-import ToolBar from '@/components/Header/ToolBar.vue'
+import ToolBar from '@/components/ToolBar/ToolBar.vue'
 const route = useRoute()
 </script>
 

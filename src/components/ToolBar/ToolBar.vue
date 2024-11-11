@@ -3,7 +3,7 @@
     <div
       class="container py-6 px-2 mx-auto flex items-center justify-between gap-y-5 flex-wrap"
     >
-      <UiTabs
+      <CommonTabs
         :tabs="[
           { name: 'Home', label: 'dashboard', route: { name: 'Home' } },
           { name: 'Sponsors', label: 'homiylar', route: { name: 'Sponsors' } },
@@ -12,21 +12,21 @@
       />
       <div class="flex items-center gap-5 flex-wrap">
         <div class="flex items-center gap-2 bg-[#E8E8E8] px-2.5 rounded-md">
-          <img src="@/assets/icons/search_icon.svg" alt="search_icon" />
-          <UiInput placeholder="Izlash" size="search" />
+          <img src="../../assets/icons/search_icon.svg" alt="search_icon" />
+          <BaseInput placeholder="Izlash" size="search" />
         </div>
 
-        <UiButton size="filter" color="purple" class="flex gap-2.5">
-          <img src="@/assets/icons/filter_icon.svg" alt="filter_icon" />
+        <BaseButton size="filter" color="purple" class="flex gap-2.5">
+          <img src="../../assets/icons/filter_icon.svg" alt="filter_icon" />
           Filter
-        </UiButton>
+        </BaseButton>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import UiTabs from '@/components/UI/UiTabs.vue'
-import UiInput from '@/components/UI/UiInput.vue'
-import UiButton from '@/components/UI/UiButton.vue'
+import CommonTabs from '@/components/common/Tabs.vue'
+import BaseInput from '@/components/base/Input.vue'
+import BaseButton from '@/components/base/Button.vue'
 </script>
