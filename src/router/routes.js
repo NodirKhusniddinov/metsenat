@@ -8,18 +8,19 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: () => import('@/pages/Login.vue'),
-    meta: { hideHeader: true },
+    meta: { hideHeader: true, hideToolbar: true },
   },
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/pages/NotFound.vue'),
-    meta: { hideHeader: true }, // Add this meta property
+    meta: { hideHeader: true, hideToolbar: true },
   },
   {
     path: '/profile',
     name: 'Profile',
     component: () => import('@/pages/Profile.vue'),
+    meta: { hideToolbar: true },
   },
   {
     path: '/sponsors',

@@ -1,11 +1,14 @@
 <template>
-  <Header v-if="!route.meta.hideHeader" />
-
+  <div class="bg-white">
+    <Header v-if="!route.meta.hideHeader" />
+    <ToolBar v-if="!route.meta.hideToolbar" />
+  </div>
   <RouterView />
 </template>
 <script setup>
 import Header from '@/components/Header/Header.vue'
 import { useRoute } from 'vue-router'
+import ToolBar from '@/components/Header/ToolBar.vue'
 const route = useRoute()
 </script>
 

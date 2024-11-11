@@ -4,3 +4,7 @@
 body {
   @apply bg-[#F5F5F7];
 }
+
+.card_wrapper{
+  @apply bg-white rounded-xl border border-[rgba(235,238,252,1)] mx-auto sm:w-[300px] max-sm:w-[300px] xl:w-[381px]  w-[381px]
+}

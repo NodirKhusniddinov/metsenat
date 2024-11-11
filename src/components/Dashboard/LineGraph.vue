@@ -3,7 +3,7 @@
     id="chart"
     class="container mx-auto px-6 py-6 bg-white rounded-xl border border-[rgba(235,238,252,1)] mt-7"
   >
-    <apexchart
+    <ApexChart
       type="line"
       height="350"
       :options="chartOptions"
@@ -17,7 +17,7 @@ import VueApexCharts from 'vue3-apexcharts'
 
 export default {
   components: {
-    apexchart: VueApexCharts,
+    ApexChart: VueApexCharts,
   },
   data: function () {
     return {
