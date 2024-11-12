@@ -20,18 +20,28 @@
           </div>
         </div>
       </RouterLink>
-      <RouterLink :to="{ name: 'Login' }">
+      <button @click="logout">
         <img
           src="@/assets/icons/logout_icon.svg"
           alt="logout_icon"
           class="min-w-8 min-h-8"
         />
-      </RouterLink>
+      </button>
     </div>
   </nav>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import { useAuthStore } from '@/stores/auth.js'
+import { useRouter } from 'vue-router'
+
 const userName = ref('Nodir')
+const authStore = useAuthStore()
+const router = useRouter()
+
+const logout = () => {
+  authStore.logout()
+  router.push({ name: 'Login' })
+}
 </script>

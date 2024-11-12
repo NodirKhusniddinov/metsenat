@@ -21,13 +21,20 @@
 import { ref } from 'vue'
 import BaseInput from '@/components/base/Input.vue'
 import BaseButton from '@/components/base/Button.vue'
+import { useAuthStore } from '@/stores/auth'
+import { useRouter } from 'vue-router'
 
-const login = ref('')
-const password = ref('')
+const authStore = useAuthStore()
+const router = useRouter()
+
+const login = ref('Nodir03')
+const password = ref('123test')
 const handleSubmit = () => {
-  console.log('Login:', login.value)
-  console.log('Password:', password.value)
-  login.value = ''
-  password.value = ''
+  if (login.value === 'Nodir03' && password.value === '123test') {
+    authStore.login()
+    router.push({ name: 'Home' })
+  } else {
+    alert('Invalid login or password.')
+  }
 }
 </script>
