@@ -9,5 +9,20 @@ body {
   @apply bg-white rounded-xl border border-[rgba(235,238,252,1)] mx-auto sm:w-[300px] max-sm:w-[300px] xl:w-[381px]  w-[381px]
 }
 .card_title{
-  @apply font-sf-bold text-2xl text-[rgba(40,41,61,1)] leading-7;
+  @apply font-sf-bold text-2xl text-[#28293D] leading-7;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.label{
+    @apply pt-7 pb-2 text-sm leading-[14.22px] tracking-[2px] font-rubik-medium text-[#1D1D1F] uppercase
 }

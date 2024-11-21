@@ -27,10 +27,10 @@ import { useRouter } from 'vue-router'
 const authStore = useAuthStore()
 const router = useRouter()
 
-const login = ref('Nodir03')
+const login = ref('Nodir')
 const password = ref('123test')
 const handleSubmit = () => {
-  if (login.value === 'Nodir03' && password.value === '123test') {
+  if (login.value === 'Nodir' && password.value === '123test') {
     authStore.login()
     router.push({ name: 'Home' })
   } else {

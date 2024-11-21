@@ -63,8 +63,9 @@ const buttonClasses = computed(() => ({
 .base-button-white {
   @apply bg-white border hover:bg-zinc-100 shadow-sm;
 }
+
 .base-button-white.base-button-primary {
-  @apply text-blue-600;
+  @apply text-[#B2B7C1];
 }
 .base-button-white.base-button-secondary {
   @apply text-zinc-500;

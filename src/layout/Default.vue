@@ -1,13 +1,14 @@
 <template>
   <div class="bg-white">
-    <Header v-if="!route.meta.hideHeader" />
-    <ToolBar v-if="!route.meta.hideToolbar" />
+    <Header />
+    <ToolBar />
   </div>
-  <RouterView />
+  <main>
+    <slot />
+  </main>
 </template>
+
 <script setup>
-import { useRoute } from 'vue-router'
 import Header from '@/components/Header/Header.vue'
 import ToolBar from '@/components/ToolBar/ToolBar.vue'
-const route = useRoute()
 </script>

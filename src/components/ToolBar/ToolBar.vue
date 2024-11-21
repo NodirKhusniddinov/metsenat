@@ -16,17 +16,28 @@
           <BaseInput placeholder="Izlash" size="search" />
         </div>
 
-        <BaseButton size="filter" color="purple" class="flex gap-2.5">
+        <BaseButton
+          size="filter"
+          color="purple"
+          class="flex gap-2.5"
+          @click="showModal = !showModal"
+        >
           <img src="../../assets/icons/filter_icon.svg" alt="filter_icon" />
           Filter
         </BaseButton>
       </div>
     </div>
   </div>
+
+  <Modal :isVisible="showModal" @closeModal="showModal = false" />
 </template>
 
 <script setup>
 import CommonTabs from '@/components/common/Tabs.vue'
 import BaseInput from '@/components/base/Input.vue'
 import BaseButton from '@/components/base/Button.vue'
+import Modal from '@/components/Modal/Modal.vue'
+import { ref } from 'vue'
+
+const showModal = ref(false)
 </script>

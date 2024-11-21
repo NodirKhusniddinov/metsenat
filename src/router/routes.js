@@ -35,6 +35,18 @@ const routes = [
     component: () => import('@/pages/Students.vue'),
     meta: { requiresAuth: true },
   },
+  {
+    path: '/sponsor-details/:sponsorId',
+    name: 'SponsorDetails',
+    component: () => import('@/pages/SponsorDetails.vue'),
+    meta: { requiresAuth: true, hideToolbar: true },
+  },
+  {
+    path: '/student-details/:studentId',
+    name: 'StudentDetails',
+    component: () => import('@/pages/StudentDetails.vue'),
+    meta: { requiresAuth: true, hideToolbar: true },
+  },
 ]
 
 export default routes
