@@ -3,7 +3,7 @@
     <button
       @click="toggleDropdown"
       class="w-full px-4 py-3 border border-[#E0E7FF] bg-[#E0E7FF33] rounded focus:outline-none flex items-center justify-between text-[16px] transition duration-300 ease-in-out"
-      :class="{ 'border-[#2E5BFF] bg-[#F9FAFF]': isOpen }"
+      :class="{ active: isOpen }"
     >
       {{ selectedLabel }}
       <img
@@ -111,5 +111,8 @@ const selectOption = option => {
 .dropdown-enter-active,
 .dropdown-leave-active {
   transform-origin: top;
+}
+.active {
+  @apply border border-[#2E5BFF] bg-[#F9FAFF];
 }
 </style>
