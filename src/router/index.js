@@ -13,7 +13,11 @@ router.beforeEach((to, from, next) => {
   if (to.meta.requiresAuth && !authStore.isAuthenticated) {
     next({ name: 'Login' })
   } else if (!to.meta.requiresAuth && authStore.isAuthenticated) {
-    next({ name: 'Home' })
+    if (to.name === 'Login') {
+      next({ name: 'Home' })
+    } else {
+      next()
+    }
   } else {
     next()
   }

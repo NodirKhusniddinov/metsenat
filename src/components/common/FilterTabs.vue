@@ -38,7 +38,6 @@ const activeTab = ref(0)
 
 const selectTab = index => {
   activeTab.value = index
-  emit('tabSelected', index)
 }
 </script>
 

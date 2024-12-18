@@ -10,7 +10,10 @@
           { name: 'Students', label: 'talabalar', route: { name: 'Students' } },
         ]"
       />
-      <div class="flex items-center gap-5 flex-wrap">
+      <div
+        v-if="!route.meta.hideSearchAndFilter"
+        class="flex items-center gap-5 flex-wrap"
+      >
         <div class="flex items-center gap-2 bg-[#E8E8E8] px-2.5 rounded-md">
           <img src="../../assets/icons/search_icon.svg" alt="search_icon" />
           <BaseInput placeholder="Izlash" size="search" />
@@ -38,6 +41,7 @@ import BaseInput from '@/components/base/Input.vue'
 import BaseButton from '@/components/base/Button.vue'
 import Modal from '@/components/Modal/Modal.vue'
 import { ref } from 'vue'
-
+import { useRoute } from 'vue-router'
+const route = useRoute()
 const showModal = ref(false)
 </script>
