@@ -1,11 +1,14 @@
 <template>
   <div>
-    <img
-      src="@/assets/images/info-bg.png"
-      alt="border image"
-      class="fixed bottom-0 left-1/2 transform -translate-x-1/2"
-    />
+    <DetailsToolbar />
+
+    <SponsorsDetailsCard />
+    <BgDetails />
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import DetailsToolbar from '@/components/ToolBar/DetailsToolbar.vue'
+import SponsorsDetailsCard from '@/components/Sponsors/DetailsCard.vue'
+import BgDetails from '@/components/common/BgDetails.vue'
+</script>
