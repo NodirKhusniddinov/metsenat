@@ -1,5 +1,7 @@
 <template>
-  <div class="container py-6 px-2 mx-auto flex items-center justify-between">
+  <div
+    class="container mt-[28px] px-2 mx-auto flex items-center justify-between"
+  >
     <SponsorsTable class="w-full" :list="sponsorList.results" />
   </div>
 </template>

@@ -32,16 +32,27 @@
     </div>
   </div>
 
-  <Modal :isVisible="showModal" @closeModal="showModal = false" />
+  <SponsorsFilterModal
+    :isVisible="showModal"
+    @closeModal="showModal = false"
+    v-if="route.path === `/sponsors`"
+  />
+  <StudentsFilterModal
+    :isVisible="showModal"
+    @closeModal="showModal = false"
+    v-if="route.path === `/students`"
+  />
 </template>
 
 <script setup>
 import CommonTabs from '@/components/common/Tabs.vue'
 import BaseInput from '@/components/base/Input.vue'
 import BaseButton from '@/components/base/Button.vue'
-import Modal from '@/components/Modal/Modal.vue'
+import SponsorsFilterModal from '@/components/Modal/SponsorsFilterModal.vue'
+import StudentsFilterModal from '@/components/Modal/StudentsFilterModal.vue'
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 const route = useRoute()
+console.log(route.path)
 const showModal = ref(false)
 </script>

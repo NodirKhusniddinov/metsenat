@@ -39,6 +39,12 @@ const routes = [
     meta: { requiresAuth: true },
   },
   {
+    path: '/add',
+    name: 'AddStudent',
+    component: () => import('@/pages/AddStudent.vue'),
+    meta: { requiresAuth: true, hideToolbar: true },
+  },
+  {
     path: '/sponsor-details/:sponsorId',
     name: 'SponsorDetails',
     component: () => import('@/pages/SponsorDetails.vue'),

@@ -8,9 +8,10 @@
         @click="goBack"
       />
       <h1 class="font-sf-bold text-2xl text-[#28293D]">
-        Ishmuhammedov Aziz Ishqobilovich
+        {{ name }}
       </h1>
       <div
+        v-if="verified"
         class="bg-[#DDFFF2] py-1.5 px-3 rounded-[5px] text-[#00CF83] font-rubik text-xs"
       >
         Tasdiqlangan
@@ -21,6 +22,10 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
+const props = defineProps({
+  name: { type: String, required: true },
+  verified: { type: Boolean, required: false },
+})
 const router = useRouter()
 const goBack = () => {
   router.go(-1)

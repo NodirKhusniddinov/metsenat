@@ -1,11 +1,25 @@
 <template>
-  <div class="container py-6 px-2 mx-auto flex items-center justify-between">
+  <div class="container px-2 mx-auto flex flex-col items-center">
+    <div class="w-full flex justify-end my-[28px]">
+      <BaseButton size="filter" class="flex gap-2.5" @click="navigateToAdd">
+        <img src="@/assets/icons/add_icon_white.svg" alt="add icon" />
+        Talaba qo‘shish
+      </BaseButton>
+    </div>
     <StudentsTable class="w-full" :list="studentList.results" />
   </div>
 </template>
 
 <script setup>
 import StudentsTable from '@/components/Tables/StudentsTable.vue'
+import BaseButton from '@/components/base/Button.vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const navigateToAdd = () => {
+  router.push({ name: 'AddStudent' })
+}
 const studentList = {
   count: 184,
   next: 'http://metsenatclub.xn--h28h.uz/api/v1/student-list/?page=2',
