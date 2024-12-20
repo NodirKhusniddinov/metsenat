@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
+import { defineProps, onMounted } from 'vue'
 import MoneyIcon from '@/assets/icons/MoneyIcon.vue'
 const props = defineProps({
   color: {
