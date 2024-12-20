@@ -2,7 +2,12 @@
   <div class="mt-10 bg-white rounded-xl pt-6 pb-8 px-8 mx-auto max-w-[793px]">
     <div class="flex justify-between items-center">
       <h3 class="font-sf-bold text-2xl text-[#28293D]">Homiy haqida</h3>
-      <BaseButton size="filter" color="purple" class="flex gap-2.5">
+      <BaseButton
+        @click="showModal = !showModal"
+        size="filter"
+        color="purple"
+        class="flex gap-2.5"
+      >
         <img src="../../assets/icons/edit_icon.svg" alt="edit icon" />
         Tahrirlash
       </BaseButton>
@@ -48,10 +53,22 @@
       </p>
     </div>
   </div>
+
+  <EditSponsorDetailsModal
+    :isVisible="showModal"
+    @closeModal="showModal = false"
+  />
 </template>
 
 <script setup>
 import BaseButton from '@/components/base/Button.vue'
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
+import EditSponsorDetailsModal from '@/components/Modal/EditSponsorDetailsModal.vue'
+
+const route = useRoute()
+const showModal = ref(false)
+
 const formatNumber = value => {
   return value.toLocaleString('en-US').replace(/,/g, ' ')
 }

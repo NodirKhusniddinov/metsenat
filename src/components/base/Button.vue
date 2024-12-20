@@ -77,7 +77,7 @@ const buttonClasses = computed(() => ({
   @apply text-amber-500;
 }
 .base-button-white.base-button-danger {
-  @apply text-red-600;
+  @apply text-red-600 bg-[#FFECEB] border-0 hover:bg-red-100 shadow-sm text-[#FF4945];
 }
 .base-button-solid.base-button-purple {
   @apply bg-[#EDF1FD] text-blue-600 hover:bg-blue-100;

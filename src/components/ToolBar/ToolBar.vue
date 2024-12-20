@@ -53,6 +53,5 @@ import StudentsFilterModal from '@/components/Modal/StudentsFilterModal.vue'
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 const route = useRoute()
-console.log(route.path)
 const showModal = ref(false)
 </script>

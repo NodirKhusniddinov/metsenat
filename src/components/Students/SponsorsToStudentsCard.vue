@@ -3,7 +3,12 @@
     <div class="flex justify-between items-center">
       <h3 class="font-sf-bold text-2xl text-[#28293D]">Talabaga homiylar</h3>
 
-      <BaseButton size="filter" color="purple" class="flex gap-2.5">
+      <BaseButton
+        @click="showAddModal = !showAddModal"
+        size="filter"
+        color="purple"
+        class="flex gap-2.5"
+      >
         <img src="../../assets/icons/add_icon.svg" alt="add icon" />
         Homiy qo‘shish
       </BaseButton>
@@ -41,16 +46,34 @@
               src="@/assets/icons/edit_icon.svg"
               alt="edit icon"
               class="cursor-pointer"
+              @click="showModal = !showModal"
             />
           </td>
         </tr>
       </tbody>
     </table>
   </div>
+  <EditSponsorDetailsOfStudentModal
+    :isVisible="showModal"
+    @closeModal="showModal = false"
+  />
+  <AddSponsorToStudentModal
+    :isVisible="showAddModal"
+    @closeModal="showAddModal = false"
+  />
 </template>
 
 <script setup>
 import BaseButton from '@/components/base/Button.vue'
+
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
+import EditSponsorDetailsOfStudentModal from '@/components/Modal/EditSponsorDetailsOfStudentModal.vue'
+import AddSponsorToStudentModal from '@/components/Modal/AddSponsorToStudentModal.vue'
+
+const route = useRoute()
+const showModal = ref(false)
+const showAddModal = ref(false)
 const props = defineProps({
   sponsors: {
     type: Array,

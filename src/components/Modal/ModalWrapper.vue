@@ -15,19 +15,8 @@
               <img src="../../assets/icons/x_icon.svg" alt="x_icon" />
             </button>
           </div>
-          <div class="border-y-2 border-[#F5F5F7] pb-7">
-            <slot></slot>
-          </div>
-          <div class="flex items-center justify-end gap-4 mt-7">
-            <BaseButton class="flex gap-2.5" variant="white">
-              <img src="../../assets/icons/clear_icon.svg" alt="clear icon" />
-              Tozalash
-            </BaseButton>
-            <BaseButton class="flex gap-2.5">
-              <img src="../../assets/icons/eye_icon.svg" alt="eye icon" />
-              Natijalarni ko‘rish
-            </BaseButton>
-          </div>
+
+          <slot></slot>
         </div>
       </div>
     </Transition>
@@ -36,7 +25,6 @@
 
 <script setup>
 import { defineEmits, defineProps } from 'vue'
-import BaseButton from '@/components/base/Button.vue'
 
 const props = defineProps({
   isVisible: { type: Boolean, default: false },
