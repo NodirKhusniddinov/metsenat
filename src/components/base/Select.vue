@@ -16,7 +16,7 @@
     <Transition name="dropdown">
       <div
         v-if="isOpen"
-        class="absolute left-0 mt-1 z-10 w-full bg-white rounded-md max-h-60 overflow-y-auto [box-shadow:0px_4px_24px_0px_#00000014] text-[14px] border-[0.5px] border-[#E0E7FF]"
+        class="absolute left-0 mt-1 z-10 w-full bg-white rounded-md max-h-32 overflow-y-auto [box-shadow:0px_4px_24px_0px_#00000014] text-[14px] border-[0.5px] border-[#E0E7FF]"
       >
         <ul>
           <li

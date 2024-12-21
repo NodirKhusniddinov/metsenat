@@ -4,7 +4,7 @@
       <p class="label">Talabalik turi</p>
       <BaseSelect v-model="selected" :options="options" />
       <p class="label">OTM</p>
-      <BaseSelect v-model="selected" :options="options" />
+      <BaseSelect v-model="selected" :options="transformedList" />
     </div>
 
     <div class="flex items-center justify-end gap-4 mt-7">
@@ -21,12 +21,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import BaseSelect from '@/components/base/Select.vue'
 import ModalWrapper from '@/components/Modal/ModalWrapper.vue'
 import BaseButton from '@/components/base/Button.vue'
+import { useInstituteList } from '@/composables/useInstituteList.js'
 
-const selected = ref(null)
 const options = ref([
   { label: 'Barchasi', value: 'option1' },
   { label: 'Yangi', value: 'option2' },
@@ -36,4 +36,32 @@ const options = ref([
   { label: 'Bekor qilingan', value: 'option5' },
   { label: 'Bekor qilingan', value: 'option5' },
 ])
+const { list, fetchInstituteList } = useInstituteList()
+const selected = ref(null)
+
+const transformedList = ref([])
+
+const transformList = data => {
+  if (!data || !Array.isArray(data)) {
+    return []
+  }
+  return data.map(item => ({
+    value: item.id,
+    label: item.name,
+  }))
+}
+
+watch(list, newList => {
+  if (newList && newList.length > 0) {
+    transformedList.value = transformList(newList)
+  } else {
+    transformedList.value = []
+  }
+})
+
+onMounted(() => {
+  fetchInstituteList().catch(error => {
+    console.error('Error fetching institute list:', error)
+  })
+})
 </script>
