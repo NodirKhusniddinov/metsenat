@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import { defineEmits, defineProps } from 'vue'
+import { defineEmits, defineProps, watch, onUnmounted, onMounted } from 'vue'
 
 const props = defineProps({
   isVisible: { type: Boolean, default: false },
@@ -35,6 +35,28 @@ const emits = defineEmits(['closeModal'])
 const closeModal = () => {
   emits('closeModal')
 }
+
+watch(
+  () => props.isVisible,
+  newVal => {
+    if (newVal) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+  },
+  { immediate: true },
+)
+
+onMounted(() => {
+  if (props.isVisible) {
+    document.body.style.overflow = 'hidden'
+  }
+})
+
+onUnmounted(() => {
+  document.body.style.overflow = ''
+})
 </script>
 <style scoped>
 .fade-enter-active,

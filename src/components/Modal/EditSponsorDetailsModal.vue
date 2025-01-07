@@ -1,7 +1,7 @@
 <template>
   <ModalWrapper>
     <!--      max-h-[585px] overflow-y-auto-->
-    <div class="border-y-2 border-[#F5F5F7] pb-7">
+    <div class="border-y-2 border-[#F5F5F7] pb-7 max-h-[585px] overflow-y-auto">
       <ModalTab :tabs="tabs" v-model="activeTab" class="mt-7 cursor-pointer" />
       <p class="label">F.I.Sh. (Familiya Ism Sharifingiz)</p>
       <BaseInput modelValue="Ishmuhammedov Aziz Ishqobilovich" />
